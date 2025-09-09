@@ -2,18 +2,18 @@
 
 Links:
 
-[https://example.com/](https://example.com/)
+[Example.com](https://example.com/)
 
-[https://www.demogr.mpg.de/en/about_us_6113/staff_directory_1899/](MPIDR Staff directory)
+[MPIDR Staff directory](https://www.demogr.mpg.de/en/about_us_6113/staff_directory_1899/)
 
-[https://www.linkedin.com/feed/](Linkedin.com)
+[LinkedIn.com](https://www.linkedin.com/feed/)
 
-[https://www.linkedin.com/campaignmanager/](LinkedIn Campaignmanager) - for creating new ads
+[LinkedIn Campaignmanager](https://www.linkedin.com/campaignmanager/) - for creating new ads
 
-[https://curlconverter.com/](Curl converter) - convert curl commands easily into code
+[Curl converter](https://curlconverter.com/) - convert curl commands easily into code
 
 [JSON Formatter](https://jsonformatter.org/)
 
 
-[https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads/advertising-targeting/audience-counts?view=li-lms-2025-08&tabs=http](Linkedin official audience counts API documentation)
+[LinkedIn official audience counts API documentation](https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads/advertising-targeting/audience-counts?view=li-lms-2025-08&tabs=http)
 
