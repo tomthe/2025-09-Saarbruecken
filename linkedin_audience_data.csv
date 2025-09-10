@@ -1,0 +1,76 @@
+location,age_range,gender,language,audience_count
+Germany,All ages,All genders,French,160000
+Germany,All ages,All genders,Spanish,180000
+Germany,All ages,All genders,Italian,83000
+Germany,All ages,All genders,English,24000000
+Germany,All ages,All genders,German,18000000
+Germany,All ages,male,French,10000
+Germany,All ages,male,Spanish,11000
+Germany,All ages,male,Italian,6500
+Germany,All ages,male,English,2500000
+Germany,All ages,male,German,2000000
+Germany,All ages,female,French,7900
+Germany,All ages,female,Spanish,10000
+Germany,All ages,female,Italian,5500
+Germany,All ages,female,English,1600000
+Germany,All ages,female,German,1300000
+Germany,18-24,All genders,French,8100
+Germany,18-24,All genders,Spanish,6800
+Germany,18-24,All genders,Italian,4000
+Germany,18-24,All genders,English,1400000
+Germany,18-24,All genders,German,1100000
+Germany,18-24,male,French,3600
+Germany,18-24,male,Spanish,3100
+Germany,18-24,male,Italian,1900
+Germany,18-24,male,English,700000
+Germany,18-24,male,German,590000
+Germany,18-24,female,French,2800
+Germany,18-24,female,Spanish,2900
+Germany,18-24,female,Italian,1700
+Germany,18-24,female,English,550000
+Germany,18-24,female,German,440000
+Germany,25-34,All genders,French,8400
+Germany,25-34,All genders,Spanish,9700
+Germany,25-34,All genders,Italian,5300
+Germany,25-34,All genders,English,1600000
+Germany,25-34,All genders,German,1200000
+Germany,25-34,male,French,3900
+Germany,25-34,male,Spanish,4600
+Germany,25-34,male,Italian,2600
+Germany,25-34,male,English,880000
+Germany,25-34,male,German,710000
+Germany,25-34,female,French,3100
+Germany,25-34,female,Spanish,4400
+Germany,25-34,female,Italian,2300
+Germany,25-34,female,English,590000
+Germany,25-34,female,German,460000
+Germany,35-54,All genders,French,4500
+Germany,35-54,All genders,Spanish,6400
+Germany,35-54,All genders,Italian,3200
+Germany,35-54,All genders,English,1200000
+Germany,35-54,All genders,German,910000
+Germany,35-54,male,French,2300
+Germany,35-54,male,Spanish,3200
+Germany,35-54,male,Italian,1700
+Germany,35-54,male,English,740000
+Germany,35-54,male,German,570000
+Germany,35-54,female,French,1700
+Germany,35-54,female,Spanish,2900
+Germany,35-54,female,Italian,1400
+Germany,35-54,female,English,400000
+Germany,35-54,female,German,300000
+Germany,55+,All genders,French,610
+Germany,55+,All genders,Spanish,550
+Germany,55+,All genders,Italian,380
+Germany,55+,All genders,English,280000
+Germany,55+,All genders,German,230000
+Germany,55+,male,French,390
+Germany,55+,male,Spanish,330
+Germany,55+,male,Italian,0
+Germany,55+,male,English,200000
+Germany,55+,male,German,170000
+Germany,55+,female,French,0
+Germany,55+,female,Spanish,0
+Germany,55+,female,Italian,0
+Germany,55+,female,English,66000
+Germany,55+,female,German,56000
