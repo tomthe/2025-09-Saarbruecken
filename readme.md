@@ -17,3 +17,4 @@ Links:
 
 [LinkedIn official audience counts API documentation](https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads/advertising-targeting/audience-counts?view=li-lms-2025-08&tabs=http)
 
+[https://www.linkedin.com/company/1069836](https://www.linkedin.com/company/1069836) MPIDR linkedin page
