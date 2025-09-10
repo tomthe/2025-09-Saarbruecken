@@ -8,47 +8,11 @@ import json
 
 #%%
 cookies = {
-    'bcookie': '"v=2&d06e9ab1-c3e1-4868-8b12-3d23f7bcb447"',
-    'li_gc': 'MTswOzE3NTc0MjIwMjY7MjswMjHWQzHrLECT1t7ZlxcdU+AU4xuUIhllV4i724HdcwELyg==',
-    'bscookie': '"v=1&20250909124710ebeeffed-5459-4ae8-8fa4-ae671088a6f6AQHQ6AefMiXzOVPs1yIIzATD8xFxlNDj"',
-    'li_alerts': 'e30=',
-    'li_rm': 'AQGJVYdDBWIzCAAAAZkuhHnbNIdMox_jews8Thqb_AzFkr88ARsh0vmvHrMVtWKmFJbwodBHTt3BtvKGjsBQr0yMH4YzCvD3gf9tspHR9xtzX2eYOWUGuzLu',
-    'li_at': 'AQEDAS3W8qAFt6BVAAABmS6FVTYAAAGZUpHZNk0Aob2aJWWHvU7D34xMmlOBzVjFe78ohjruK5xRjD7lEoY_lzcMXJ6PL5ZRThYV3rmQp2DaNLutDfo9jM-BFm1gDVtUQA9_I6DHhjyYOqP4YgKacpI0',
-    'liap': 'true',
-    'JSESSIONID': '"ajax:7096641885251446497"',
-    'timezone': 'Europe/Berlin',
-    'li_theme': 'light',
-    'li_theme_set': 'app',
-    'dfpfpt': '733a4eafecb446dcaab9a503417f47f2',
-    'fptctx2': 'taBcrIH61PuCVH7eNCyH0FFaWZWIHTJWSYlBtG47cVshdOy7P1490jg04nCmvXBEfjwO%252fLyXNStYvTSwCtrlwaOkaZjWUivxh%252fgUJ%252bco0Ah1vTdSmdQRp1WspX6R8OaRU%252bM0AVAR6W%252bnhC818RjyijSHIB5QeMGsYSzCG3Y5jXTPauXRFXyzle%252f2NP3jakfaMzDAYaS7RmsIY6wPaD%252b0KbRhNr2JGbaqdwrKcZZdy2i1O3Ws%252bYANgbZ3hdyH%252blfapq0yArf6kmuKGU2tPd1jOelsHMeik95tYP7zsT22fAftGZ8MqE7dkmtpHAuVcl3XHDkVxce%252b7gH1LnXW06ZAH1UY9%252bRo15ZDmWOqpj3Y1F4%253d',
-    'PLAY_LANG': 'en',
-    'lang': 'v=2&lang=en-US',
-    'lidc': '"b=TB36:s=T:r=T:a=V:p=T:g=22254:u=662:x=1:i=1757422941:t=1757509341:v=2:sig=AQHHNjtoLoyfDA1Ht1yNQjWuncwRyTdk"',
-    'li_mc': 'MTs0MjsxNzU3NDI0NjQ3OzI7MDIxcIF6XwUPKBg11xraD4iMnRpYw8jC7nmci5diV31SQDE=',
+    # replace with your cookies from curlconverter....
 }
 
 headers = {
-    'accept': '*/*',
-    'accept-language': 'en,de;q=0.9,de-DE;q=0.8,en-GB;q=0.7,en-US;q=0.6',
-    'content-type': 'application/x-www-form-urlencoded',
-    'csrf-token': 'ajax:7096641885251446497',
-    'origin': 'https://www.linkedin.com',
-    'priority': 'u=1, i',
-    'referer': 'https://www.linkedin.com/campaignmanager/accounts/503555724/campaigns/new/details?businessId=personal&campaignGroupId=768164513&initialObjectiveType=WEBSITE_VISIT',
-    'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Microsoft Edge";v="140"',
-    'sec-ch-ua-mobile': '?0',
-    'sec-ch-ua-platform': '"Windows"',
-    'sec-fetch-dest': 'empty',
-    'sec-fetch-mode': 'cors',
-    'sec-fetch-site': 'same-origin',
-    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0',
-    'x-http-method-override': 'GET',
-    'x-li-er-key': 'urn:li:sponsoredAccount:503555724',
-    'x-li-lang': 'en_US',
-    'x-li-page-instance': 'urn:li:page:d_campaign_details;XAJGPtdeRAeg6ed4+QaSqw==',
-    'x-li-track': '{"clientVersion":"2.33.1754","mpVersion":"2.33.1754","osName":"web","timezoneOffset":2,"timezone":"Europe/Berlin","deviceFormFactor":"DESKTOP","mpName":"campaign-manager-web","displayDensity":1.5,"displayWidth":2560.5,"displayHeight":1600.5}',
-    'x-restli-protocol-version': '2.0.0',
-    # 'cookie': 'bcookie="v=2&d06e9ab1-c3e1-4868-8b12-3d23f7bcb447"; li_gc=MTswOzE3NTc0MjIwMjY7MjswMjHWQzHrLECT1t7ZlxcdU+AU4xuUIhllV4i724HdcwELyg==; bscookie="v=1&20250909124710ebeeffed-5459-4ae8-8fa4-ae671088a6f6AQHQ6AefMiXzOVPs1yIIzATD8xFxlNDj"; li_alerts=e30=; li_rm=AQGJVYdDBWIzCAAAAZkuhHnbNIdMox_jews8Thqb_AzFkr88ARsh0vmvHrMVtWKmFJbwodBHTt3BtvKGjsBQr0yMH4YzCvD3gf9tspHR9xtzX2eYOWUGuzLu; li_at=AQEDAS3W8qAFt6BVAAABmS6FVTYAAAGZUpHZNk0Aob2aJWWHvU7D34xMmlOBzVjFe78ohjruK5xRjD7lEoY_lzcMXJ6PL5ZRThYV3rmQp2DaNLutDfo9jM-BFm1gDVtUQA9_I6DHhjyYOqP4YgKacpI0; liap=true; JSESSIONID="ajax:7096641885251446497"; timezone=Europe/Berlin; li_theme=light; li_theme_set=app; dfpfpt=733a4eafecb446dcaab9a503417f47f2; fptctx2=taBcrIH61PuCVH7eNCyH0FFaWZWIHTJWSYlBtG47cVshdOy7P1490jg04nCmvXBEfjwO%252fLyXNStYvTSwCtrlwaOkaZjWUivxh%252fgUJ%252bco0Ah1vTdSmdQRp1WspX6R8OaRU%252bM0AVAR6W%252bnhC818RjyijSHIB5QeMGsYSzCG3Y5jXTPauXRFXyzle%252f2NP3jakfaMzDAYaS7RmsIY6wPaD%252b0KbRhNr2JGbaqdwrKcZZdy2i1O3Ws%252bYANgbZ3hdyH%252blfapq0yArf6kmuKGU2tPd1jOelsHMeik95tYP7zsT22fAftGZ8MqE7dkmtpHAuVcl3XHDkVxce%252b7gH1LnXW06ZAH1UY9%252bRo15ZDmWOqpj3Y1F4%253d; PLAY_LANG=en; lang=v=2&lang=en-US; lidc="b=TB36:s=T:r=T:a=V:p=T:g=22254:u=662:x=1:i=1757422941:t=1757509341:v=2:sig=AQHHNjtoLoyfDA1Ht1yNQjWuncwRyTdk"; li_mc=MTs0MjsxNzU3NDI0NjQ3OzI7MDIxcIF6XwUPKBg11xraD4iMnRpYw8jC7nmci5diV31SQDE=',
+    # replace with your headers from curlconverter....
 }
 
 
