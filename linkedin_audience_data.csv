@@ -1,76 +1,181 @@
-location,age_range,gender,language,audience_count
-Germany,All ages,All genders,French,160000
-Germany,All ages,All genders,Spanish,180000
-Germany,All ages,All genders,Italian,83000
-Germany,All ages,All genders,English,24000000
-Germany,All ages,All genders,German,18000000
-Germany,All ages,male,French,10000
-Germany,All ages,male,Spanish,11000
-Germany,All ages,male,Italian,6500
-Germany,All ages,male,English,2500000
-Germany,All ages,male,German,2000000
-Germany,All ages,female,French,7900
-Germany,All ages,female,Spanish,10000
-Germany,All ages,female,Italian,5500
-Germany,All ages,female,English,1600000
-Germany,All ages,female,German,1300000
-Germany,18-24,All genders,French,8100
-Germany,18-24,All genders,Spanish,6800
-Germany,18-24,All genders,Italian,4000
-Germany,18-24,All genders,English,1400000
-Germany,18-24,All genders,German,1100000
-Germany,18-24,male,French,3600
-Germany,18-24,male,Spanish,3100
-Germany,18-24,male,Italian,1900
-Germany,18-24,male,English,700000
-Germany,18-24,male,German,590000
-Germany,18-24,female,French,2800
-Germany,18-24,female,Spanish,2900
-Germany,18-24,female,Italian,1700
-Germany,18-24,female,English,550000
-Germany,18-24,female,German,440000
-Germany,25-34,All genders,French,8400
-Germany,25-34,All genders,Spanish,9700
-Germany,25-34,All genders,Italian,5300
-Germany,25-34,All genders,English,1600000
-Germany,25-34,All genders,German,1200000
-Germany,25-34,male,French,3900
-Germany,25-34,male,Spanish,4600
-Germany,25-34,male,Italian,2600
-Germany,25-34,male,English,880000
-Germany,25-34,male,German,710000
-Germany,25-34,female,French,3100
-Germany,25-34,female,Spanish,4400
-Germany,25-34,female,Italian,2300
-Germany,25-34,female,English,590000
-Germany,25-34,female,German,460000
-Germany,35-54,All genders,French,4500
-Germany,35-54,All genders,Spanish,6400
-Germany,35-54,All genders,Italian,3200
-Germany,35-54,All genders,English,1200000
-Germany,35-54,All genders,German,910000
-Germany,35-54,male,French,2300
-Germany,35-54,male,Spanish,3200
-Germany,35-54,male,Italian,1700
-Germany,35-54,male,English,740000
-Germany,35-54,male,German,570000
-Germany,35-54,female,French,1700
-Germany,35-54,female,Spanish,2900
-Germany,35-54,female,Italian,1400
-Germany,35-54,female,English,400000
-Germany,35-54,female,German,300000
-Germany,55+,All genders,French,610
-Germany,55+,All genders,Spanish,550
-Germany,55+,All genders,Italian,380
-Germany,55+,All genders,English,280000
-Germany,55+,All genders,German,230000
-Germany,55+,male,French,390
-Germany,55+,male,Spanish,330
-Germany,55+,male,Italian,0
-Germany,55+,male,English,200000
-Germany,55+,male,German,170000
-Germany,55+,female,French,0
-Germany,55+,female,Spanish,0
-Germany,55+,female,Italian,0
-Germany,55+,female,English,66000
-Germany,55+,female,German,56000
+location,age_range,gender,language,audience_count,success,error,timestamp
+Germany,All,All,Italian,83000,True,,2025-09-10T15:09:19.879104
+Germany,All,All,French,160000,True,,2025-09-10T15:09:20.302240
+Germany,All,All,Spanish,180000,True,,2025-09-10T15:09:20.744634
+Germany,All,All,English,24000000,True,,2025-09-10T15:09:21.227277
+Germany,All,male,Italian,6500,True,,2025-09-10T15:09:21.667336
+Germany,All,male,French,10000,True,,2025-09-10T15:09:22.106198
+Germany,All,male,Spanish,11000,True,,2025-09-10T15:09:22.522309
+Germany,All,male,English,2500000,True,,2025-09-10T15:09:22.944952
+Germany,All,female,Italian,5500,True,,2025-09-10T15:09:23.367386
+Germany,All,female,French,7900,True,,2025-09-10T15:09:23.783264
+Germany,All,female,Spanish,10000,True,,2025-09-10T15:09:24.257864
+Germany,All,female,English,1600000,True,,2025-09-10T15:09:24.658744
+Germany,18-24,All,Italian,4000,True,,2025-09-10T15:09:25.124315
+Germany,18-24,All,French,8100,True,,2025-09-10T15:09:25.533151
+Germany,18-24,All,Spanish,6800,True,,2025-09-10T15:09:26.010511
+Germany,18-24,All,English,1400000,True,,2025-09-10T15:09:26.462111
+Germany,18-24,male,Italian,1900,True,,2025-09-10T15:09:26.977783
+Germany,18-24,male,French,3600,True,,2025-09-10T15:09:27.434565
+Germany,18-24,male,Spanish,3100,True,,2025-09-10T15:09:27.838048
+Germany,18-24,male,English,700000,True,,2025-09-10T15:09:28.280518
+Germany,18-24,female,Italian,1700,True,,2025-09-10T15:09:28.692780
+Germany,18-24,female,French,2800,True,,2025-09-10T15:09:29.148080
+Germany,18-24,female,Spanish,2900,True,,2025-09-10T15:09:29.565897
+Germany,18-24,female,English,550000,True,,2025-09-10T15:09:29.988469
+Germany,25-34,All,Italian,5300,True,,2025-09-10T15:09:30.418535
+Germany,25-34,All,French,8400,True,,2025-09-10T15:09:30.850321
+Germany,25-34,All,Spanish,9700,True,,2025-09-10T15:09:31.252328
+Germany,25-34,All,English,1600000,True,,2025-09-10T15:09:31.651822
+Germany,25-34,male,Italian,2600,True,,2025-09-10T15:09:32.131353
+Germany,25-34,male,French,3900,True,,2025-09-10T15:09:32.566882
+Germany,25-34,male,Spanish,4600,True,,2025-09-10T15:09:32.980833
+Germany,25-34,male,English,880000,True,,2025-09-10T15:09:33.395057
+Germany,25-34,female,Italian,2300,True,,2025-09-10T15:09:33.794429
+Germany,25-34,female,French,3100,True,,2025-09-10T15:09:34.223722
+Germany,25-34,female,Spanish,4400,True,,2025-09-10T15:09:34.683960
+Germany,25-34,female,English,590000,True,,2025-09-10T15:09:35.105603
+Germany,35-54,All,Italian,3200,True,,2025-09-10T15:09:35.531579
+Germany,35-54,All,French,4500,True,,2025-09-10T15:09:35.967059
+Germany,35-54,All,Spanish,6400,True,,2025-09-10T15:09:36.383805
+Germany,35-54,All,English,1200000,True,,2025-09-10T15:09:36.806385
+Germany,35-54,male,Italian,1700,True,,2025-09-10T15:09:37.248461
+Germany,35-54,male,French,2300,True,,2025-09-10T15:09:37.684066
+Germany,35-54,male,Spanish,3200,True,,2025-09-10T15:09:38.118731
+Germany,35-54,male,English,740000,True,,2025-09-10T15:09:38.595189
+Germany,35-54,female,Italian,1400,True,,2025-09-10T15:09:39.083762
+Germany,35-54,female,French,1700,True,,2025-09-10T15:09:39.544148
+Germany,35-54,female,Spanish,2900,True,,2025-09-10T15:09:39.960125
+Germany,35-54,female,English,400000,True,,2025-09-10T15:09:40.384825
+Germany,55+,All,Italian,380,True,,2025-09-10T15:09:40.850886
+Germany,55+,All,French,610,True,,2025-09-10T15:09:41.285295
+Germany,55+,All,Spanish,550,True,,2025-09-10T15:09:41.793096
+Germany,55+,All,English,280000,True,,2025-09-10T15:09:42.228926
+Germany,55+,male,Italian,0,True,,2025-09-10T15:09:42.672934
+Germany,55+,male,French,390,True,,2025-09-10T15:09:43.110488
+Germany,55+,male,Spanish,330,True,,2025-09-10T15:09:43.548091
+Germany,55+,male,English,200000,True,,2025-09-10T15:09:44.001446
+Germany,55+,female,Italian,0,True,,2025-09-10T15:09:44.417080
+Germany,55+,female,French,0,True,,2025-09-10T15:09:44.861854
+Germany,55+,female,Spanish,0,True,,2025-09-10T15:09:45.282285
+Germany,55+,female,English,66000,True,,2025-09-10T15:09:45.715883
+Italy,All,All,Italian,22000000,True,,2025-09-10T15:09:46.162285
+Italy,All,All,French,140000,True,,2025-09-10T15:09:46.614642
+Italy,All,All,Spanish,160000,True,,2025-09-10T15:09:47.009192
+Italy,All,All,English,25000000,True,,2025-09-10T15:09:47.474195
+Italy,All,male,Italian,2000000,True,,2025-09-10T15:09:47.882866
+Italy,All,male,French,8900,True,,2025-09-10T15:09:48.350347
+Italy,All,male,Spanish,9900,True,,2025-09-10T15:09:48.769385
+Italy,All,male,English,2300000,True,,2025-09-10T15:09:49.417444
+Italy,All,female,Italian,1900000,True,,2025-09-10T15:09:49.840440
+Italy,All,female,French,6300,True,,2025-09-10T15:09:50.323909
+Italy,All,female,Spanish,11000,True,,2025-09-10T15:09:50.745313
+Italy,All,female,English,2200000,True,,2025-09-10T15:09:51.160560
+Italy,18-24,All,Italian,1100000,True,,2025-09-10T15:09:51.626047
+Italy,18-24,All,French,9800,True,,2025-09-10T15:09:52.077176
+Italy,18-24,All,Spanish,8600,True,,2025-09-10T15:09:52.517023
+Italy,18-24,All,English,1300000,True,,2025-09-10T15:09:52.950355
+Italy,18-24,male,Italian,490000,True,,2025-09-10T15:09:53.367359
+Italy,18-24,male,French,4400,True,,2025-09-10T15:09:53.879618
+Italy,18-24,male,Spanish,3700,True,,2025-09-10T15:09:54.314003
+Italy,18-24,male,English,560000,True,,2025-09-10T15:09:54.730268
+Italy,18-24,female,Italian,540000,True,,2025-09-10T15:09:55.131532
+Italy,18-24,female,French,3000,True,,2025-09-10T15:09:55.575039
+Italy,18-24,female,Spanish,4100,True,,2025-09-10T15:09:56.041072
+Italy,18-24,female,English,620000,True,,2025-09-10T15:09:56.445259
+Italy,25-34,All,Italian,1500000,True,,2025-09-10T15:09:56.864176
+Italy,25-34,All,French,6000,True,,2025-09-10T15:09:57.281565
+Italy,25-34,All,Spanish,8900,True,,2025-09-10T15:09:57.686402
+Italy,25-34,All,English,1600000,True,,2025-09-10T15:09:58.217890
+Italy,25-34,male,Italian,690000,True,,2025-09-10T15:09:58.663456
+Italy,25-34,male,French,2800,True,,2025-09-10T15:09:59.121071
+Italy,25-34,male,Spanish,3700,True,,2025-09-10T15:09:59.619912
+Italy,25-34,male,English,770000,True,,2025-09-10T15:10:00.132348
+Italy,25-34,female,Italian,730000,True,,2025-09-10T15:10:00.551174
+Italy,25-34,female,French,2000,True,,2025-09-10T15:10:01.006155
+Italy,25-34,female,Spanish,4600,True,,2025-09-10T15:10:01.589515
+Italy,25-34,female,English,800000,True,,2025-09-10T15:10:02.030435
+Italy,35-54,All,Italian,1300000,True,,2025-09-10T15:10:02.491333
+Italy,35-54,All,French,2700,True,,2025-09-10T15:10:02.925313
+Italy,35-54,All,Spanish,4700,True,,2025-09-10T15:10:03.340801
+Italy,35-54,All,English,1400000,True,,2025-09-10T15:10:03.815959
+Italy,35-54,male,Italian,650000,True,,2025-09-10T15:10:04.251436
+Italy,35-54,male,French,1200,True,,2025-09-10T15:10:04.754276
+Italy,35-54,male,Spanish,2200,True,,2025-09-10T15:10:05.184069
+Italy,35-54,male,English,750000,True,,2025-09-10T15:10:05.666686
+Italy,35-54,female,Italian,580000,True,,2025-09-10T15:10:06.121423
+Italy,35-54,female,French,1100,True,,2025-09-10T15:10:06.589990
+Italy,35-54,female,Spanish,2300,True,,2025-09-10T15:10:07.097914
+Italy,35-54,female,English,660000,True,,2025-09-10T15:10:07.518319
+Italy,55+,All,Italian,350000,True,,2025-09-10T15:10:07.939871
+Italy,55+,All,French,570,True,,2025-09-10T15:10:08.399809
+Italy,55+,All,Spanish,560,True,,2025-09-10T15:10:08.833273
+Italy,55+,All,English,400000,True,,2025-09-10T15:10:09.345456
+Italy,55+,male,Italian,220000,True,,2025-09-10T15:10:09.863114
+Italy,55+,male,French,360,True,,2025-09-10T15:10:10.391220
+Italy,55+,male,Spanish,340,True,,2025-09-10T15:10:10.854677
+Italy,55+,male,English,260000,True,,2025-09-10T15:10:11.307976
+Italy,55+,female,Italian,110000,True,,2025-09-10T15:10:11.852994
+Italy,55+,female,French,0,True,,2025-09-10T15:10:12.306124
+Italy,55+,female,Spanish,0,True,,2025-09-10T15:10:12.748100
+Italy,55+,female,English,120000,True,,2025-09-10T15:10:13.160443
+Denmark,All,All,Italian,5600,True,,2025-09-10T15:10:13.585183
+Denmark,All,All,French,7800,True,,2025-09-10T15:10:14.002241
+Denmark,All,All,Spanish,15000,True,,2025-09-10T15:10:14.414145
+Denmark,All,All,English,3800000,True,,2025-09-10T15:10:14.849058
+Denmark,All,male,Italian,700,True,,2025-09-10T15:10:15.293177
+Denmark,All,male,French,620,True,,2025-09-10T15:10:15.721624
+Denmark,All,male,Spanish,1300,True,,2025-09-10T15:10:16.149326
+Denmark,All,male,English,560000,True,,2025-09-10T15:10:16.621643
+Denmark,All,female,Italian,640,True,,2025-09-10T15:10:17.036150
+Denmark,All,female,French,540,True,,2025-09-10T15:10:17.450667
+Denmark,All,female,Spanish,1200,True,,2025-09-10T15:10:17.837505
+Denmark,All,female,English,460000,True,,2025-09-10T15:10:18.276952
+Denmark,18-24,All,Italian,440,True,,2025-09-10T15:10:18.735098
+Denmark,18-24,All,French,410,True,,2025-09-10T15:10:19.134395
+Denmark,18-24,All,Spanish,800,True,,2025-09-10T15:10:19.585665
+Denmark,18-24,All,English,240000,True,,2025-09-10T15:10:20.054950
+Denmark,18-24,male,Italian,0,True,,2025-09-10T15:10:20.464894
+Denmark,18-24,male,French,0,True,,2025-09-10T15:10:20.932592
+Denmark,18-24,male,Spanish,370,True,,2025-09-10T15:10:21.363352
+Denmark,18-24,male,English,120000,True,,2025-09-10T15:10:21.768780
+Denmark,18-24,female,Italian,0,True,,2025-09-10T15:10:22.201677
+Denmark,18-24,female,French,0,True,,2025-09-10T15:10:22.609000
+Denmark,18-24,female,Spanish,360,True,,2025-09-10T15:10:23.034230
+Denmark,18-24,female,English,96000,True,,2025-09-10T15:10:23.444282
+Denmark,25-34,All,Italian,620,True,,2025-09-10T15:10:23.927042
+Denmark,25-34,All,French,540,True,,2025-09-10T15:10:24.334962
+Denmark,25-34,All,Spanish,1200,True,,2025-09-10T15:10:24.773981
+Denmark,25-34,All,English,340000,True,,2025-09-10T15:10:25.218396
+Denmark,25-34,male,Italian,300,True,,2025-09-10T15:10:25.704079
+Denmark,25-34,male,French,0,True,,2025-09-10T15:10:26.130083
+Denmark,25-34,male,Spanish,560,True,,2025-09-10T15:10:26.574115
+Denmark,25-34,male,English,170000,True,,2025-09-10T15:10:26.986409
+Denmark,25-34,female,Italian,0,True,,2025-09-10T15:10:27.450451
+Denmark,25-34,female,French,0,True,,2025-09-10T15:10:27.890581
+Denmark,25-34,female,Spanish,550,True,,2025-09-10T15:10:28.500865
+Denmark,25-34,female,English,140000,True,,2025-09-10T15:10:29.001548
+Denmark,35-54,All,Italian,0,True,,2025-09-10T15:10:29.481635
+Denmark,35-54,All,French,320,True,,2025-09-10T15:10:29.962462
+Denmark,35-54,All,Spanish,520,True,,2025-09-10T15:10:30.438000
+Denmark,35-54,All,English,380000,True,,2025-09-10T15:10:30.921909
+Denmark,35-54,male,Italian,0,True,,2025-09-10T15:10:31.438786
+Denmark,35-54,male,French,0,True,,2025-09-10T15:10:32.150913
+Denmark,35-54,male,Spanish,0,True,,2025-09-10T15:10:32.570287
+Denmark,35-54,male,English,190000,True,,2025-09-10T15:10:32.991693
+Denmark,35-54,female,Italian,0,True,,2025-09-10T15:10:33.456592
+Denmark,35-54,female,French,0,True,,2025-09-10T15:10:33.862510
+Denmark,35-54,female,Spanish,0,True,,2025-09-10T15:10:34.291767
+Denmark,35-54,female,English,160000,True,,2025-09-10T15:10:34.702029
+Denmark,55+,All,Italian,0,True,,2025-09-10T15:10:35.147669
+Denmark,55+,All,French,0,True,,2025-09-10T15:10:35.583390
+Denmark,55+,All,Spanish,0,True,,2025-09-10T15:10:35.998483
+Denmark,55+,All,English,140000,True,,2025-09-10T15:10:36.465146
+Denmark,55+,male,Italian,0,True,,2025-09-10T15:10:36.906122
+Denmark,55+,male,French,0,True,,2025-09-10T15:10:37.312237
+Denmark,55+,male,Spanish,0,True,,2025-09-10T15:10:37.716283
+Denmark,55+,male,English,83000,True,,2025-09-10T15:10:38.134825
+Denmark,55+,female,Italian,0,True,,2025-09-10T15:10:38.555637
+Denmark,55+,female,French,0,True,,2025-09-10T15:10:39.003056
+Denmark,55+,female,Spanish,0,True,,2025-09-10T15:10:39.419193
+Denmark,55+,female,English,51000,True,,2025-09-10T15:10:39.915298
