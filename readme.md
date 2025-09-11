@@ -1,4 +1,4 @@
-## Gathering social media data
+## 𝑀𝑒𝑎𝑠𝑢𝑟𝑖𝑛𝑔 𝑎𝑛𝑑 𝑢𝑛𝑑𝑒𝑟𝑠𝑡𝑎𝑛𝑑𝑖𝑛𝑔 𝑏𝑖𝑎𝑠 𝑖𝑛 𝑑𝑖𝑔𝑖𝑡𝑎𝑙 𝑡𝑟𝑎𝑐𝑒 𝑑𝑎𝑡𝑎 - Hands on workshop
 
 A 2.5 hours hands-on workshop for the [Summer Institute in Computational Social Science](https://sicss.io/2025/saarbrucken/) hosted by the [Saarland Informatics Campus ](https://saarland-informatics-campus.de/en/) in Saarbrücken in September 2025.
 
