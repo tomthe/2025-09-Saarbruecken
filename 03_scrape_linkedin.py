@@ -1,10 +1,16 @@
 #%%
 # The following syntax allows you to install packages directly from a Jupyter notebook cell.
-# If you're running this code outside of a Jupyter notebook, you should install the packages using
+# If you're running this code outside of a Jupyter notebook, you should install the packages using pip directly
 %pip install requests
 #%%
 import requests
 import json
+import urllib.parse
+import csv
+import pickle
+import os
+from datetime import datetime
+import itertools
 
 #%%
 cookies = {
@@ -77,131 +83,143 @@ data = 'q=targetingCriteria&cmTargetingCriteria=(include:(and:List((or:List((fac
 # Then also write code that uses this function to get the audience count for all combinations
 # and saves the results in a CSV file.
 
-# It would be great if requests could be cached, so that we don't have to repeat requests for the same criteria.
-#file:03_scrape_linkedin.py
 
-import csv
-import hashlib
-import os
-from urllib.parse import quote
+
+
+# Result:
 
 #%%
-# Mapping dictionaries for targeting criteria
-LOCATION_MAPPING = {
-    "Germany": "urn:urn%3Ali%3Ageo%3A101282230"
+import urllib.parse
+import csv
+import pickle
+import os
+from datetime import datetime
+import itertools
+
+# Mapping dictionaries for different targeting criteria
+LOCATION_MAP = {
+    "Germany": {
+        "urn": "urn:urn%3Ali%3Ageo%3A101282230",
+        "name": "Germany", 
+        "ancestor": "urn%3Ali%3Ageo%3A100506914"
+    },
+    "Italy": {
+        "urn": "urn:urn%3Ali%3Ageo%3A103350119",
+        "name": "Italy",
+        "ancestor": "urn%3Ali%3Ageo%3A100506914"
+    },
+    "Denmark": {
+        "urn": "urn:urn%3Ali%3Ageo%3A104514075", 
+        "name": "Denmark",
+        "ancestor": "urn%3Ali%3Ageo%3A100506914"
+    }
 }
 
-AGE_RANGE_MAPPING = {
-    "18-24": "urn:urn%3Ali%3AageRange%3A%2818%2C24%29",
-    "25-34": "urn:urn%3Ali%3AageRange%3A%2825%2C34%29", 
-    "35-54": "urn:urn%3Ali%3AageRange%3A%2835%2C54%29",
-    "55+": "urn:urn%3Ali%3AageRange%3A%2855%2C2147483647%29"
+AGE_RANGE_MAP = {
+    "18-24": {
+        "urn": "urn:urn%3Ali%3AageRange%3A%2818%2C24%29",
+        "name": "18%20to%2024"
+    },
+    "25-34": {
+        "urn": "urn:urn%3Ali%3AageRange%3A%2825%2C34%29", 
+        "name": "25%20to%2034"
+    },
+    "35-54": {
+        "urn": "urn:urn%3Ali%3AageRange%3A%2835%2C54%29",
+        "name": "35%20to%2054"
+    },
+    "55+": {
+        "urn": "urn:urn%3Ali%3AageRange%3A%2855%2C2147483647%29",
+        "name": "55%2B"
+    }
+}
+GENDER_MAP = {
+    "male": {
+        "urn": "urn:urn%3Ali%3Agender%3AMALE",
+        "name": "Male"
+    },
+    "female": {
+        "urn": "urn:urn%3Ali%3Agender%3AFEMALE", 
+        "name": "Female"
+    }
 }
 
-GENDER_MAPPING = {
-    "male": "urn:urn%3Ali%3Agender%3AMALE",
-    "female": "urn:urn%3Ali%3Agender%3AFEMALE"
+LANGUAGE_MAP = {
+    "Italian": {
+        "urn": "urn:urn%3Ali%3Alocale%3Ait_IT",
+        "name": "Italian"
+    },
+    "French": {
+        "urn": "urn:urn%3Ali%3Alocale%3Afr_FR",
+        "name": "French"
+    },
+    "Spanish": {
+        "urn": "urn:urn%3Ali%3Alocale%3Aes_ES",
+        "name": "Spanish"
+    },
+    "English": {
+        "urn": "urn:urn%3Ali%3Alocale%3Aen_US",
+        "name": "English"
+    }
 }
 
-LANGUAGE_MAPPING = {
-    "Italian": "urn:urn%3Ali%3Alocale%3Ait_IT",
-    "French": "urn:urn%3Ali%3Alocale%3Afr_FR", 
-    "Spanish": "urn:urn%3Ali%3Alocale%3Aes_ES",
-    "English": "urn:urn%3Ali%3Alocale%3Aen_US",
-    "German": "urn:urn%3Ali%3Alocale%3Ade_DE"
-}
-
-def generate_targeting_criteria(location=None, age_range=None, gender=None, language=None):
+def build_targeting_criteria(location=None, age_range=None, gender=None, language=None):
     """
-    Generate LinkedIn targeting criteria string based on input parameters.
+    Build LinkedIn targeting criteria string based on input parameters.
     
     Args:
-        location (str): Location name (e.g., "Germany")
-        age_range (str): Age range (e.g., "18-24", "25-34", "35-54", "55+")
-        gender (str): Gender ("male", "female")
-        language (str): Language (e.g., "French", "Spanish", "Italian", "English", "German")
+        location (str): Location name (e.g., "Germany", "Italy", "Denmark")
+        age_range (str): Age range (e.g., "18-24", "25-34", "35-54", "55+") 
+        gender (str): Gender ("male" or "female")
+        language (str): Language (e.g., "French", "Spanish", "Italian", "English")
     
     Returns:
         str: URL-encoded targeting criteria string
     """
     criteria_parts = []
     
-    # Add location criteria (required)
-    if location and location in LOCATION_MAPPING:
-        location_urn = LOCATION_MAPPING[location]
-        location_criteria = f"(or:List((facet:(urn:urn%3Ali%3AadTargetingFacet%3Alocations,name:Locations),segments:List(({location_urn},name:{location},facetUrn:urn%3Ali%3AadTargetingFacet%3Alocations,ancestorUrns:List(urn%3Ali%3Ageo%3A100506914))))))"
-        criteria_parts.append(location_criteria)
+    # Location targeting (required)
+    if location and location in LOCATION_MAP:
+        loc_data = LOCATION_MAP[location]
+        location_part = f"(or:List((facet:(urn:urn%3Ali%3AadTargetingFacet%3Alocations,name:Locations),segments:List(({loc_data['urn']},name:{loc_data['name']},facetUrn:urn%3Ali%3AadTargetingFacet%3Alocations,ancestorUrns:List({loc_data['ancestor']}))))))"
+        criteria_parts.append(location_part)
     
-    # Add age range criteria
-    if age_range and age_range in AGE_RANGE_MAPPING:
-        age_urn = AGE_RANGE_MAPPING[age_range]
-        age_display = age_range.replace("+", "%2B")
-        age_criteria = f"(or:List((facet:(urn:urn%3Ali%3AadTargetingFacet%3AageRanges,name:Member%20Age),segments:List(({age_urn},name:{age_display},facetUrn:urn%3Ali%3AadTargetingFacet%3AageRanges)))))"
-        criteria_parts.append(age_criteria)
+    # Age range targeting (optional)
+    if age_range and age_range in AGE_RANGE_MAP:
+        age_data = AGE_RANGE_MAP[age_range]
+        age_part = f"(or:List((facet:(urn:urn%3Ali%3AadTargetingFacet%3AageRanges,name:Member%20Age),segments:List(({age_data['urn']},name:{age_data['name']},facetUrn:urn%3Ali%3AadTargetingFacet%3AageRanges)))))"
+        criteria_parts.append(age_part)
     
-    # Add gender criteria
-    if gender and gender in GENDER_MAPPING:
-        gender_urn = GENDER_MAPPING[gender]
-        gender_display = gender.capitalize()
-        gender_criteria = f"(or:List((facet:(urn:urn%3Ali%3AadTargetingFacet%3Agenders,name:Member%20Gender),segments:List(({gender_urn},name:{gender_display},facetUrn:urn%3Ali%3AadTargetingFacet%3Agenders)))))"
-        criteria_parts.append(gender_criteria)
+    # Gender targeting (optional)
+    if gender and gender in GENDER_MAP:
+        gender_data = GENDER_MAP[gender]
+        gender_part = f"(or:List((facet:(urn:urn%3Ali%3AadTargetingFacet%3Agenders,name:Member%20Gender),segments:List(({gender_data['urn']},name:{gender_data['name']},facetUrn:urn%3Ali%3AadTargetingFacet%3Agenders)))))"
+        criteria_parts.append(gender_part)
     
-    # Add language criteria
-    if language and language in LANGUAGE_MAPPING:
-        language_urn = LANGUAGE_MAPPING[language]
-        language_criteria = f"(or:List((facet:(urn:urn%3Ali%3AadTargetingFacet%3AinterfaceLocales,name:Profile%20language),segments:List(({language_urn},name:{language},facetUrn:urn%3Ali%3AadTargetingFacet%3AinterfaceLocales)))))"
-        criteria_parts.append(language_criteria)
+    # Language targeting (optional)
+    if language and language in LANGUAGE_MAP:
+        lang_data = LANGUAGE_MAP[language]
+        language_part = f"(or:List((facet:(urn:urn%3Ali%3AadTargetingFacet%3AinterfaceLocales,name:Profile%20language),segments:List(({lang_data['urn']},name:{lang_data['name']},facetUrn:urn%3Ali%3AadTargetingFacet%3AinterfaceLocales)))))"
+        criteria_parts.append(language_part)
     
-    # Join all criteria parts
-    if criteria_parts:
-        criteria_string = ",".join(criteria_parts)
-        full_criteria = f"q=targetingCriteria&cmTargetingCriteria=(include:(and:List({criteria_string})),exclude:(or:List()))&withValidation=true"
-        return full_criteria
-    else:
-        return None
+    # Combine all criteria parts
+    criteria_string = ",".join(criteria_parts)
+    
+    # Build the full targeting criteria
+    full_criteria = f"q=targetingCriteria&cmTargetingCriteria=(include:(and:List({criteria_string})),exclude:(or:List()))&withValidation=true"
+    
+    return full_criteria
 
-# Cache functionality
-CACHE_FILE = "linkedin_audience_cache.json"
-
-def get_cache():
-    """Load cache from file"""
-    if os.path.exists(CACHE_FILE):
-        try:
-            with open(CACHE_FILE, 'r') as f:
-                return json.load(f)
-        except:
-            return {}
-    return {}
-
-def save_cache(cache):
-    """Save cache to file"""
-    with open(CACHE_FILE, 'w') as f:
-        json.dump(cache, f, indent=2)
-
-def get_cache_key(location, age_range, gender, language):
-    """Generate a unique cache key for the parameters"""
-    key_data = f"{location}_{age_range}_{gender}_{language}"
-    return hashlib.md5(key_data.encode()).hexdigest()
-
-def get_audience_count(location=None, age_range=None, gender=None, language=None, use_cache=True):
+def get_audience_count(cookies, headers, location=None, age_range=None, gender=None, language=None):
     """
-    Get audience count for given targeting criteria with caching support.
+    Get LinkedIn audience count for specific targeting criteria.
+    
+    Returns:
+        dict: Response data with audience count or error information
     """
-    # Check cache first
-    cache_key = get_cache_key(location, age_range, gender, language)
-    cache = get_cache() if use_cache else {}
-    
-    if use_cache and cache_key in cache:
-        print(f"Cache hit for {location}, {age_range}, {gender}, {language}")
-        return cache[cache_key]
-    
-    # Generate targeting criteria
-    data = generate_targeting_criteria(location, age_range, gender, language)
-    if not data:
-        return None
-    
     try:
-        # Make the request
+        data = build_targeting_criteria(location, age_range, gender, language)
+        
         response = requests.post(
             'https://www.linkedin.com/campaign-manager-api/campaignManagerAudienceCounts',
             cookies=cookies,
@@ -211,100 +229,138 @@ def get_audience_count(location=None, age_range=None, gender=None, language=None
         
         if response.status_code == 200:
             response_data = response.json()
-            audience_count = response_data['elements'][0]['count']
-            
-            # Cache the result
-            if use_cache:
-                cache[cache_key] = audience_count
-                save_cache(cache)
-            
-            return audience_count
-        else:
-            print(f"Request failed with status code: {response.status_code}")
-            return None
-            
+            if 'elements' in response_data and len(response_data['elements']) > 0:
+                return {
+                    'success': True,
+                    'count': response_data['elements'][0]['count'],
+                    'allow_activation': response_data['elements'][0].get('allowCampaignActivation', False)
+                }
+        
+        return {
+            'success': False,
+            'error': f"HTTP {response.status_code}",
+            'response': response.text[:200]  # First 200 chars for debugging
+        }
+        
     except Exception as e:
-        print(f"Error making request: {e}")
-        return None
+        return {
+            'success': False,
+            'error': str(e)
+        }
 
-def generate_all_combinations_csv(filename="linkedin_audience_data.csv"):
+def collect_all_combinations_with_cache(cookies, headers, cache_file='linkedin_cache.pkl', output_file='linkedin_audience_data.csv'):
     """
-    Generate audience counts for all combinations and save to CSV.
+    Collect audience counts for all combinations of targeting criteria with caching.
+    
+    Args:
+        cookies (dict): LinkedIn session cookies
+        headers (dict): Request headers
+        cache_file (str): Path to cache file
+        output_file (str): Path to output CSV file
     """
+    
+    # Load existing cache
+    cache = {}
+    if os.path.exists(cache_file):
+        try:
+            with open(cache_file, 'rb') as f:
+                cache = pickle.load(f)
+            print(f"Loaded cache with {len(cache)} entries")
+        except:
+            print("Could not load cache file, starting fresh")
+    
     # Define all possible values
-    locations = ["Germany"]
-    age_ranges = [None, "18-24", "25-34", "35-54", "55+"]
-    genders = [None, "male", "female"]
-    languages = ["French", "Spanish", "Italian", "English", "German"]
+    locations = list(LOCATION_MAP.keys())
+    age_ranges = [None] + list(AGE_RANGE_MAP.keys())  # None means no age restriction
+    genders = [None, "male", "female"]  # None means no gender restriction
+    languages = list(LANGUAGE_MAP.keys())
+    
+    # Generate all combinations
+    all_combinations = list(itertools.product(locations, age_ranges, genders, languages))
     
     results = []
-    total_combinations = len(locations) * len(age_ranges) * len(genders) * len(languages)
-    current = 0
+    new_requests = 0
     
-    print(f"Processing {total_combinations} combinations...")
+    print(f"Processing {len(all_combinations)} combinations...")
     
-    for location in locations:
-        for age_range in age_ranges:
-            for gender in genders:
-                for language in languages:
-                    current += 1
-                    print(f"Processing {current}/{total_combinations}: {location}, {age_range}, {gender}, {language}")
-                    
-                    count = get_audience_count(location, age_range, gender, language)
-                    
-                    results.append({
-                        'location': location,
-                        'age_range': age_range or 'All ages',
-                        'gender': gender or 'All genders',
-                        'language': language,
-                        'audience_count': count
-                    })
-                    
-                    # Small delay to be respectful to the API
-                    import time
-                    time.sleep(0.5)
-    
-    # Save to CSV
-    with open(filename, 'w', newline='', encoding='utf-8') as csvfile:
-        fieldnames = ['location', 'age_range', 'gender', 'language', 'audience_count']
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+    for i, (location, age_range, gender, language) in enumerate(all_combinations):
+        # Create cache key
+        cache_key = (location, age_range, gender, language)
         
-        writer.writeheader()
-        for result in results:
-            writer.writerow(result)
+        # Check cache first
+        if cache_key in cache:
+            result = cache[cache_key]
+        else:
+            # Make API request
+            result = get_audience_count(cookies, headers, location, age_range, gender, language)
+            cache[cache_key] = result
+            new_requests += 1
+            
+            # Save cache every 10 new requests
+            if new_requests % 10 == 0:
+                with open(cache_file, 'wb') as f:
+                    pickle.dump(cache, f)
+                print(f"Progress: {i+1}/{len(all_combinations)} - Cache updated ({new_requests} new requests)")
+        
+        # Add to results
+        row = {
+            'location': location,
+            'age_range': age_range or 'All',
+            'gender': gender or 'All', 
+            'language': language,
+            'audience_count': result.get('count', 0) if result.get('success') else 0,
+            'success': result.get('success', False),
+            'error': result.get('error', ''),
+            'timestamp': datetime.now().isoformat()
+        }
+        results.append(row)
     
-    print(f"Results saved to {filename}")
+    # Save final cache
+    with open(cache_file, 'wb') as f:
+        pickle.dump(cache, f)
+    
+    # Save results to CSV
+    if results:
+        with open(output_file, 'w', newline='', encoding='utf-8') as f:
+            writer = csv.DictWriter(f, fieldnames=results[0].keys())
+            writer.writeheader()
+            writer.writerows(results)
+        
+        print(f"Results saved to {output_file}")
+        print(f"Total combinations: {len(results)}")
+        print(f"New API requests made: {new_requests}")
+        print(f"Successful requests: {sum(1 for r in results if r['success'])}")
+    
     return results
 
-# Example usage and testing
-if __name__ == "__main__":
-    # Test the function with a few examples
-    print("Testing targeting criteria generation:")
+# Example usage and test
+def test_targeting_function():
+    """Test the targeting criteria function with some examples"""
     
-    # Test 1: Location + Age + Language (like your examples)
-    criteria1 = generate_targeting_criteria("Germany", "35-54", None, "Italian")
-    print("Test 1 - Germany, 35-54, Italian:")
+    # Test case 1: Germany, 35-54, French
+    criteria1 = build_targeting_criteria("Germany", "35-54", None, "French")
+    print("Test 1 - Germany, 35-54, French:")
     print(criteria1[:100] + "...")
     
-    # Test 2: Location + Gender + Language
-    criteria2 = generate_targeting_criteria("Germany", None, "female", "French") 
+    # Test case 2: Germany, female, French  
+    criteria2 = build_targeting_criteria("Germany", None, "female", "French")
     print("\nTest 2 - Germany, female, French:")
     print(criteria2[:100] + "...")
     
-    # Test 3: All parameters
-    criteria3 = generate_targeting_criteria("Germany", "25-34", "male", "Spanish")
-    print("\nTest 3 - Germany, 25-34, male, Spanish:")
+    # Test case 3: Germany, Spanish (no age/gender)
+    criteria3 = build_targeting_criteria("Germany", None, None, "Spanish")
+    print("\nTest 3 - Germany, Spanish:")
     print(criteria3[:100] + "...")
-    
-    # Test a single request to verify it works
-    print("\nTesting single audience count request:")
-    count = get_audience_count("Germany", "35-54", None, "Italian")
-    print(f"Audience count for Germany, 35-54, Italian: {count}")
-    
-    # Uncomment the line below to generate the full CSV (warning: this will make many API requests!)
-    results = generate_all_combinations_csv()
-    
-    print("\nTo generate the full CSV with all combinations, uncomment the last line and run the script.")
-    print("Note: This will make many API requests and may take several minutes to complete.")
 
-#%%
+# %%
+# Test the functions
+test_targeting_function()
+
+# %%
+# To collect all combinations and save to CSV_
+results = collect_all_combinations_with_cache(cookies, headers)
+
+# %%
+# To test a single request:
+result = get_audience_count(cookies, headers, "Germany", "35-54", "female", "French")
+print(f"Audience count: {result}")
