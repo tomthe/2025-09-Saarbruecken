@@ -1,0 +1,119 @@
+country,country_code,indicator_code,indicator_name,year,value
+Germany,DEU,SP.POP.TOTL,Total Population,2023,83901923.0
+Germany,DEU,SP.POP.TOTL,Total Population,2022,83797985.0
+Germany,DEU,SP.POP.TOTL,Total Population,2021,83196078.0
+Germany,DEU,SP.POP.TOTL,Total Population,2020,83160871.0
+Germany,DEU,SP.POP.TOTL,Total Population,2019,83092962.0
+Germany,DEU,SP.POP.TOTL,Total Population,2018,82905782.0
+Germany,DEU,SP.POP.TOTL,Total Population,2017,82657002.0
+Germany,DEU,SP.POP.TOTL,Total Population,2016,82348669.0
+Germany,DEU,SP.POP.TOTL,Total Population,2015,81686611.0
+Germany,DEU,SP.POP.TOTL.MA.ZS,"Population, male (% of total population)",2023,49.3751808952691
+Germany,DEU,SP.POP.TOTL.MA.ZS,"Population, male (% of total population)",2022,49.3678756688655
+Germany,DEU,SP.POP.TOTL.MA.ZS,"Population, male (% of total population)",2021,49.3677342299699
+Germany,DEU,SP.POP.TOTL.MA.ZS,"Population, male (% of total population)",2020,49.3744737826815
+Germany,DEU,SP.POP.TOTL.MA.ZS,"Population, male (% of total population)",2019,49.3799879764267
+Germany,DEU,SP.POP.TOTL.MA.ZS,"Population, male (% of total population)",2018,49.3755951438065
+Germany,DEU,SP.POP.TOTL.MA.ZS,"Population, male (% of total population)",2017,49.3628375825488
+Germany,DEU,SP.POP.TOTL.MA.ZS,"Population, male (% of total population)",2016,49.349612336756
+Germany,DEU,SP.POP.TOTL.MA.ZS,"Population, male (% of total population)",2015,49.2239918318226
+Germany,DEU,SP.POP.TOTL.FE.ZS,"Population, female (% of total population)",2023,50.6248191047309
+Germany,DEU,SP.POP.TOTL.FE.ZS,"Population, female (% of total population)",2022,50.6321243311345
+Germany,DEU,SP.POP.TOTL.FE.ZS,"Population, female (% of total population)",2021,50.6322657700301
+Germany,DEU,SP.POP.TOTL.FE.ZS,"Population, female (% of total population)",2020,50.6255262173185
+Germany,DEU,SP.POP.TOTL.FE.ZS,"Population, female (% of total population)",2019,50.6200120235733
+Germany,DEU,SP.POP.TOTL.FE.ZS,"Population, female (% of total population)",2018,50.6244048561935
+Germany,DEU,SP.POP.TOTL.FE.ZS,"Population, female (% of total population)",2017,50.6371624174512
+Germany,DEU,SP.POP.TOTL.FE.ZS,"Population, female (% of total population)",2016,50.650387663244
+Germany,DEU,SP.POP.TOTL.FE.ZS,"Population, female (% of total population)",2015,50.7760081681774
+Germany,DEU,SP.POP.0014.TO.ZS,Population ages 0-14 (% of total population),2023,13.9155702737293
+Germany,DEU,SP.POP.0014.TO.ZS,Population ages 0-14 (% of total population),2022,13.9125311211787
+Germany,DEU,SP.POP.0014.TO.ZS,Population ages 0-14 (% of total population),2021,13.8577309430111
+Germany,DEU,SP.POP.0014.TO.ZS,Population ages 0-14 (% of total population),2020,13.7617263334875
+Germany,DEU,SP.POP.0014.TO.ZS,Population ages 0-14 (% of total population),2019,13.6625971101334
+Germany,DEU,SP.POP.0014.TO.ZS,Population ages 0-14 (% of total population),2018,13.5626162807968
+Germany,DEU,SP.POP.0014.TO.ZS,Population ages 0-14 (% of total population),2017,13.4570189858595
+Germany,DEU,SP.POP.0014.TO.ZS,Population ages 0-14 (% of total population),2016,13.3264938863506
+Germany,DEU,SP.POP.0014.TO.ZS,Population ages 0-14 (% of total population),2015,13.2101109669446
+Germany,DEU,SP.POP.1564.TO.ZS,Population ages 15-64 (% of total population),2023,63.2943857808214
+Germany,DEU,SP.POP.1564.TO.ZS,Population ages 15-64 (% of total population),2022,63.6285624993021
+Germany,DEU,SP.POP.1564.TO.ZS,Population ages 15-64 (% of total population),2021,64.007731691245
+Germany,DEU,SP.POP.1564.TO.ZS,Population ages 15-64 (% of total population),2020,64.3935455490144
+Germany,DEU,SP.POP.1564.TO.ZS,Population ages 15-64 (% of total population),2019,64.709009583285
+Germany,DEU,SP.POP.1564.TO.ZS,Population ages 15-64 (% of total population),2018,64.9876223341919
+Germany,DEU,SP.POP.1564.TO.ZS,Population ages 15-64 (% of total population),2017,65.2493405041228
+Germany,DEU,SP.POP.1564.TO.ZS,Population ages 15-64 (% of total population),2016,65.5385099359924
+Germany,DEU,SP.POP.1564.TO.ZS,Population ages 15-64 (% of total population),2015,65.7365353514053
+Germany,DEU,SP.POP.65UP.TO.ZS,Population ages 65 and above (% of total population),2023,22.7900439454493
+Germany,DEU,SP.POP.65UP.TO.ZS,Population ages 65 and above (% of total population),2022,22.4589063795192
+Germany,DEU,SP.POP.65UP.TO.ZS,Population ages 65 and above (% of total population),2021,22.1345373657439
+Germany,DEU,SP.POP.65UP.TO.ZS,Population ages 65 and above (% of total population),2020,21.8447281174981
+Germany,DEU,SP.POP.65UP.TO.ZS,Population ages 65 and above (% of total population),2019,21.6283933065816
+Germany,DEU,SP.POP.65UP.TO.ZS,Population ages 65 and above (% of total population),2018,21.4497613850113
+Germany,DEU,SP.POP.65UP.TO.ZS,Population ages 65 and above (% of total population),2017,21.2936405100178
+Germany,DEU,SP.POP.65UP.TO.ZS,Population ages 65 and above (% of total population),2016,21.134996177657
+Germany,DEU,SP.POP.65UP.TO.ZS,Population ages 65 and above (% of total population),2015,21.0533536816501
+Germany,DEU,SP.POP.0014.MA.ZS,"Population ages 0-14, male (% of male population)",2023,14.4718183613135
+Germany,DEU,SP.POP.0014.MA.ZS,"Population ages 0-14, male (% of male population)",2022,14.4722279746327
+Germany,DEU,SP.POP.0014.MA.ZS,"Population ages 0-14, male (% of male population)",2021,14.4184637351598
+Germany,DEU,SP.POP.0014.MA.ZS,"Population ages 0-14, male (% of male population)",2020,14.3183741053035
+Germany,DEU,SP.POP.0014.MA.ZS,"Population ages 0-14, male (% of male population)",2019,14.2141976289214
+Germany,DEU,SP.POP.0014.MA.ZS,"Population ages 0-14, male (% of male population)",2018,14.1138870779957
+Germany,DEU,SP.POP.0014.MA.ZS,"Population ages 0-14, male (% of male population)",2017,14.0114402107566
+Germany,DEU,SP.POP.0014.MA.ZS,"Population ages 0-14, male (% of male population)",2016,13.882121718955
+Germany,DEU,SP.POP.0014.MA.ZS,"Population ages 0-14, male (% of male population)",2015,13.7838042404348
+Germany,DEU,SP.POP.1564.MA.ZS,"Population ages 15-64, male (% of male population)",2023,65.1059479755379
+Germany,DEU,SP.POP.1564.MA.ZS,"Population ages 15-64, male (% of male population)",2022,65.4481272678986
+Germany,DEU,SP.POP.1564.MA.ZS,"Population ages 15-64, male (% of male population)",2021,65.8267620281135
+Germany,DEU,SP.POP.1564.MA.ZS,"Population ages 15-64, male (% of male population)",2020,66.2177106109807
+Germany,DEU,SP.POP.1564.MA.ZS,"Population ages 15-64, male (% of male population)",2019,66.5539256173486
+Germany,DEU,SP.POP.1564.MA.ZS,"Population ages 15-64, male (% of male population)",2018,66.851819706032
+Germany,DEU,SP.POP.1564.MA.ZS,"Population ages 15-64, male (% of male population)",2017,67.1322303255267
+Germany,DEU,SP.POP.1564.MA.ZS,"Population ages 15-64, male (% of male population)",2016,67.4457840853694
+Germany,DEU,SP.POP.1564.MA.ZS,"Population ages 15-64, male (% of male population)",2015,67.6298326163158
+Germany,DEU,SP.POP.65UP.MA.ZS,"Population ages 65 and above, male (% of male population)",2023,20.4222336631486
+Germany,DEU,SP.POP.65UP.MA.ZS,"Population ages 65 and above, male (% of male population)",2022,20.0796447574687
+Germany,DEU,SP.POP.65UP.MA.ZS,"Population ages 65 and above, male (% of male population)",2021,19.7547742367266
+Germany,DEU,SP.POP.65UP.MA.ZS,"Population ages 65 and above, male (% of male population)",2020,19.4639152837158
+Germany,DEU,SP.POP.65UP.MA.ZS,"Population ages 65 and above, male (% of male population)",2019,19.2318767537301
+Germany,DEU,SP.POP.65UP.MA.ZS,"Population ages 65 and above, male (% of male population)",2018,19.0342932159723
+Germany,DEU,SP.POP.65UP.MA.ZS,"Population ages 65 and above, male (% of male population)",2017,18.8563294637167
+Germany,DEU,SP.POP.65UP.MA.ZS,"Population ages 65 and above, male (% of male population)",2016,18.6720941956756
+Germany,DEU,SP.POP.65UP.MA.ZS,"Population ages 65 and above, male (% of male population)",2015,18.5863631432494
+Germany,DEU,SP.POP.0014.FE.ZS,"Population ages 0-14, female (% of female population)",2023,13.3730527678379
+Germany,DEU,SP.POP.0014.FE.ZS,"Population ages 0-14, female (% of female population)",2022,13.36680951891
+Germany,DEU,SP.POP.0014.FE.ZS,"Population ages 0-14, female (% of female population)",2021,13.3110023427636
+Germany,DEU,SP.POP.0014.FE.ZS,"Population ages 0-14, female (% of female population)",2020,13.2188343737611
+Germany,DEU,SP.POP.0014.FE.ZS,"Population ages 0-14, female (% of female population)",2019,13.124508985956
+Germany,DEU,SP.POP.0014.FE.ZS,"Population ages 0-14, female (% of female population)",2018,13.0249443132193
+Germany,DEU,SP.POP.0014.FE.ZS,"Population ages 0-14, female (% of female population)",2017,12.9165502160795
+Germany,DEU,SP.POP.0014.FE.ZS,"Population ages 0-14, female (% of female population)",2016,12.7851353749033
+Germany,DEU,SP.POP.0014.FE.ZS,"Population ages 0-14, female (% of female population)",2015,12.6539531600228
+Germany,DEU,SP.POP.1564.FE.ZS,"Population ages 15-64, female (% of female population)",2023,61.5275406885296
+Germany,DEU,SP.POP.1564.FE.ZS,"Population ages 15-64, female (% of female population)",2022,61.8544310300567
+Germany,DEU,SP.POP.1564.FE.ZS,"Population ages 15-64, female (% of female population)",2021,62.2341312815512
+Germany,DEU,SP.POP.1564.FE.ZS,"Population ages 15-64, female (% of female population)",2020,62.6144590323747
+Germany,DEU,SP.POP.1564.FE.ZS,"Population ages 15-64, female (% of female population)",2019,62.9092879111308
+Germany,DEU,SP.POP.1564.FE.ZS,"Population ages 15-64, female (% of female population)",2018,63.1694112590484
+Germany,DEU,SP.POP.1564.FE.ZS,"Population ages 15-64, female (% of female population)",2017,63.4138351163294
+Germany,DEU,SP.POP.1564.FE.ZS,"Population ages 15-64, female (% of female population)",2016,63.6802173274509
+Germany,DEU,SP.POP.1564.FE.ZS,"Population ages 15-64, female (% of female population)",2015,63.9011084719902
+Germany,DEU,SP.POP.65UP.FE.ZS,"Population ages 65 and above, female (% of female population)",2023,25.0994065436325
+Germany,DEU,SP.POP.65UP.FE.ZS,"Population ages 65 and above, female (% of female population)",2022,24.7787594510333
+Germany,DEU,SP.POP.65UP.FE.ZS,"Population ages 65 and above, female (% of female population)",2021,24.4548663756852
+Germany,DEU,SP.POP.65UP.FE.ZS,"Population ages 65 and above, female (% of female population)",2020,24.1667065938642
+Germany,DEU,SP.POP.65UP.FE.ZS,"Population ages 65 and above, female (% of female population)",2019,23.9662031029132
+Germany,DEU,SP.POP.65UP.FE.ZS,"Population ages 65 and above, female (% of female population)",2018,23.8056444277323
+Germany,DEU,SP.POP.65UP.FE.ZS,"Population ages 65 and above, female (% of female population)",2017,23.6696146675912
+Germany,DEU,SP.POP.65UP.FE.ZS,"Population ages 65 and above, female (% of female population)",2016,23.5346472976459
+Germany,DEU,SP.POP.65UP.FE.ZS,"Population ages 65 and above, female (% of female population)",2015,23.444938367987
+Germany,DEU,SM.POP.NETM,Net migration,2023,609553.0
+Germany,DEU,SM.POP.NETM,Net migration,2022,981552.0
+Germany,DEU,SM.POP.NETM,Net migration,2021,310264.0
+Germany,DEU,SM.POP.NETM,Net migration,2020,203468.0
+Germany,DEU,SM.POP.NETM,Net migration,2019,319082.0
+Germany,DEU,SM.POP.NETM,Net migration,2018,403908.0
+Germany,DEU,SM.POP.NETM,Net migration,2017,452988.0
+Germany,DEU,SM.POP.NETM,Net migration,2016,517480.0
+Germany,DEU,SM.POP.NETM,Net migration,2015,1175283.0
+Germany,DEU,SM.POP.TOTL.ZS,International migrant stock (% of population),2015,14.8790512953233
